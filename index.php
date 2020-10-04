@@ -10,11 +10,11 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-light bg-light">
+		<nav class="navbar navbar-light bg-info">
 			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-					App Lista Tarefas
+					<h3>Docfoot Lista Tarefas</h3>
 				</a>
 			</div>
 		</nav>

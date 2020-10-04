@@ -1,3 +1,11 @@
+<?php
+	$acao = 'recuperar';
+	require 'tarefa_controller.php';
+
+	echo '<pre>';
+	print_r($tarefas);
+	echo '</pre>'
+?>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -10,11 +18,11 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-light bg-light">
+		<nav class="navbar navbar-light bg-info">
 			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-					App Lista Tarefas
+					<h3>Docfoot Lista Tarefas</h3>
 				</a>
 			</div>
 		</nav>
@@ -36,23 +44,17 @@
 								<h4>Todas tarefas</h4>
 								<hr />
 
-								<div class="row mb-3 d-flex align-items-center tarefa">
-									<div class="col-sm-9">Lavar o carro (status)</div>
-									<div class="col-sm-3 mt-2 d-flex justify-content-between">
-										<i class="fas fa-trash-alt fa-lg text-danger"></i>
-										<i class="fas fa-edit fa-lg text-info"></i>
-										<i class="fas fa-check-square fa-lg text-success"></i>
+								<?php foreach($tarefas as $indice => $tarefa) { ?>
+									<div class="row mb-3 d-flex align-items-center tarefa">
+										<div class="col-sm-9"><?php=$tarefa->tarefa?> (<?php=$tarefa->id_status?>)</div>
+										<div class="col-sm-3 mt-2 d-flex justify-content-between">
+											<i class="fas fa-trash-alt fa-lg text-danger"></i>
+											<i class="fas fa-edit fa-lg text-info"></i>
+											<i class="fas fa-check-square fa-lg text-success"></i>
+										</div>
 									</div>
-								</div>
 
-								<div class="row mb-3 d-flex align-items-center tarefa">
-									<div class="col-sm-9">Passear com o cachorro (status)</div>
-									<div class="col-sm-3 mt-2 d-flex justify-content-between">
-										<i class="fas fa-trash-alt fa-lg text-danger"></i>
-										<i class="fas fa-edit fa-lg text-info"></i>
-										<i class="fas fa-check-square fa-lg text-success"></i>
-									</div>
-								</div>
+								<?php } ?>
 								
 							</div>
 						</div>

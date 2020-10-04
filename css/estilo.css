@@ -13,8 +13,8 @@
 
 li.list-group-item.active {
 	background-color: #fff;
-	border-color: #009933;
-    border-left:solid 10px #009933;
+	border-color: #003699;
+    border-left:solid 10px #003699;
 }
 
 li a {
@@ -26,7 +26,11 @@ li a:hover {
 }
 
 h4 {
-	color: #009933 !important;
+	color: #003699 !important;
+}
+
+h3 {
+	color: #212529 !important;
 }
 
 
